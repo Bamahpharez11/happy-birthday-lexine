@@ -220,7 +220,7 @@ const assets = [
   "shared_video_C69B3B11-F568-4674-934C-64B84E275FF6.mov",
   "IMG_5361.JPG",
   "birthday_balloons_19.jpg"
-]];
+];
 
 const galleryContainer = document.getElementById('gallery-container');
 
