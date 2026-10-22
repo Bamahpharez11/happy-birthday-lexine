@@ -180,10 +180,27 @@ document.addEventListener('keydown', (e) => {
 // 5. Populate Gallery
 const assets = [
   "photo1.jpg",
+  "10D88803-1C3C-4407-9DF4-2EBAC096ED5F.MOV",
   "photo2.jpg",
+  "shared_video_9F1B6130-8396-4224-87D2-C93268AD2F54.mov",
+  "IMG_5329.JPG",
+  "57740FFF-49F4-489C-9C12-C0E7D3F10747.mov",
   "photo3.jpg",
+  "881F15DA-3A0B-4E14-B717-35DE3A640BDC.MOV",
+  "IMG_5330.jpeg",
+  "D057CF51-82B0-4E79-86AB-230591742780.MOV",
   "photo4.jpg",
-  "photo5.jpg"
+  "F2463610-21DB-4EC2-BDA3-0E832DF1B81D.mov",
+  "IMG_5336.PNG",
+  "D0BC6907-FAA9-4DD7-A453-8A453B3C7952.MOV",
+  "IMG_5337.PNG",
+  "F9BD99AB-4C4E-4FB7-A912-E1C1FD871E3A.MOV",
+  "photo5.jpg",
+  "cm-chat-media-video-1_d40b2050-5a6a-5789-9297-4f9ec1cd38b2_17674_0_0.mov",
+  "IMG_5338.PNG",
+  "b_EiQSFU1hb0ZLVHc0dGxFTEpON0pzdlBLQhoAGgAyAQFIAlAEYAE.mov",
+  "IMG_5339.PNG",
+  "shared_video_C69B3B11-F568-4674-934C-64B84E275FF6.mov"
 ];
 
 const galleryContainer = document.getElementById('gallery-container');
@@ -206,6 +223,11 @@ assets.forEach((asset, index) => {
     video.muted = true;
     video.playsInline = true;
     item.appendChild(video);
+
+    const badge = document.createElement('div');
+    badge.className = 'video-indicator-badge';
+    badge.innerHTML = '▶';
+    item.appendChild(badge);
   } else {
     const img = document.createElement('img');
     img.src = src;
