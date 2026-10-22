@@ -1,3 +1,19 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/assets/(.*).mov",
+      "headers": [
+        { "key": "Content-Type", "value": "video/quicktime" },
+        { "key": "Accept-Ranges", "value": "bytes" }
+      ]
+    },
+    {
+      "source": "/assets/(.*).MOV",
+      "headers": [
+        { "key": "Content-Type", "value": "video/quicktime" },
+        { "key": "Accept-Ranges", "value": "bytes" }
+      ]
+    }
+  ]
 }
