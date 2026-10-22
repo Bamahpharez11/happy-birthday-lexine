@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Lexine 🎂</title>
+    <meta name="description" content="A special birthday website for Lexine. Made with love.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- Background Canvases -->
+    <canvas id="particles-canvas"></canvas>
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Hidden YouTube player for background music -->
+    <div id="yt-player-container">
+      <div id="yt-player"></div>
+    </div>
+
+    <div class="app-container">
+      
+      <!-- Hero Section -->
+      <section class="hero glass-panel">
+        <h1 class="typing-container">
+          <span id="typing-text"></span><span class="cursor">|</span>
+        </h1>
+        <p class="subtitle fade-in hidden">To the most wonderful person in the world.</p>
+        <div class="scroll-indicator fade-in hidden">
+          <span>Scroll to celebrate</span>
+          <div class="arrow">↓</div>
+        </div>
+      </section>
+
+      <!-- Message Section -->
+      <section class="message-section glass-panel fade-in hidden">
+        <h2>You are so loved, Lexine.</h2>
+        <p>Lexine, this day is all about celebrating you! You bring so much light, beauty, warmth, and joy to everyone around you. I wanted to create something as special and wonderful as you are to show you how much you mean to me.</p>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section">
+        <h2 class="gallery-title fade-in hidden">Beautiful Memories</h2>
+        <div class="gallery-grid" id="gallery-container"></div>
+      </section>
+
+      <!-- Love Question Section -->
+      <section class="love-section glass-panel fade-in hidden" id="love-section">
+        <div class="love-inner">
+          <div class="love-emoji-row" id="love-emoji-row">💖 💕 💖</div>
+          <h2 class="love-question">Do you love us?</h2>
+          <p class="love-subtext">Think carefully... 😏</p>
+          <div class="love-buttons">
+            <button id="yes-btn" class="love-btn yes-btn">YES! 💗</button>
+            <button id="no-btn" class="love-btn no-btn">No</button>
+          </div>
+          <div id="love-response" class="love-response hidden"></div>
+        </div>
+      </section>
+
+      <!-- Song Section -->
+      <section class="playlist-section fade-in hidden" id="playlist-section">
+        <h2 class="playlist-title">🎵 Playing just for you</h2>
+        <p class="playlist-subtitle">A song that captures exactly how I feel 💖</p>
+        <div class="playlist-grid" id="playlist-grid">
+
+          <!-- Make You Feel My Love -->
+          <div class="playlist-card active-card" data-video-id="r8shkvV4tyM" id="card-myfml">
+            <div class="playlist-card-inner">
+              <div class="playlist-thumb">
+                <img src="https://img.youtube.com/vi/r8shkvV4tyM/mqdefault.jpg" alt="Make You Feel My Love - Anendlessocean">
+                <div class="play-overlay"><span class="play-icon">▶</span></div>
+                <div class="now-playing-badge" id="badge-myfml">🎵 Now Playing</div>
+              </div>
+              <div class="playlist-card-info">
+                <p class="track-title">Make You Feel My Love</p>
+                <p class="track-artist">Anendlessocean</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Made with love 💖 — Happy Birthday Lexine 🎂</p>
+      </footer>
+    </div>
+    
+    <!-- Modal for fullscreen images/videos -->
+    <div id="lightbox-modal" class="modal hidden">
+      <span class="close-modal" id="close-modal">&times;</span>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+
+    <!-- Floating Music Player -->
+    <div id="music-player" class="music-player">
+      <button id="music-toggle" class="music-btn" title="Toggle music">
+        <span id="music-icon">🎵</span>
+      </button>
+      <div class="music-info" id="music-info">
+        <span class="music-bars">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="music-label" id="music-label">Make You Feel My Love — Anendlessocean 💖</span>
+      </div>
+    </div>
+    
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
