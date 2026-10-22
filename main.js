@@ -437,7 +437,7 @@ yesBtn.addEventListener('click', (e) => {
     setTimeout(() => spawnHeart(e.clientX, e.clientY), i * 80);
   }
   // Show the love response
-  loveResponse.textContent = '🥰 We knew it! We love you so much, Lexine! 💖';
+  loveResponse.textContent = '🥰 I knew it! I love you so much, Lexine! 💖';
   loveResponse.classList.remove('hidden');
   loveResponse.classList.add('show');
   // Hide the buttons
